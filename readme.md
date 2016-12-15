@@ -1,5 +1,11 @@
 #Session 10
 
+Form demo. 
+
+Native CSS variables. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+
+Usage:
+
 ```css
 :root {
 	--base: #ffc600;
@@ -15,6 +21,8 @@ img {
 	color: var(--base);
 }
 ```
+
+Native CSS variables can be manipulated by JavaScript.
 
 ```js
 var inputs = document.querySelectorAll('.controls input');
@@ -42,7 +50,7 @@ inputs.forEach(function(input){
 })
 ```
 
-The suffix of the values we are working with - p. Note the data attribute in the html.
+The suffix of the values we are working with - px. Note the data-sizing attribute in the html.
 
 Add `data-daniel="me" data-munchies="snickers"`. 
 
