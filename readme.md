@@ -2,7 +2,7 @@
 
 Form demo. 
 
-Native CSS variables. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)
+Native CSS variables. [Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) and [browser support](http://caniuse.com/#feat=css-variables)
 
 Usage:
 
@@ -52,8 +52,6 @@ inputs.forEach(function(input){
 
 The suffix of the values we are working with - px. Note the data-sizing attribute in the html.
 
-Add `data-daniel="me" data-munchies="snickers"`. 
-
 Get the data set attribute values:
 
 ```
@@ -62,7 +60,9 @@ function handleUpdate(){
 }
 ```
 
-Try the below in the browser without the or nothing.
+Add `data-daniel="me" data-munchies="snickers"`. 
+
+Try the below in the browser without the "or nothing".
 
 ```
 function handleUpdate(){
@@ -95,5 +95,6 @@ Add the suffix variable:
 document.querySelector('html').style.setProperty('--' + this.name, this.value + suffix);
 ```
 
+Examine the FINISHED version to see es6 version of the code. Run it through http://babeljs.io/
 
 
