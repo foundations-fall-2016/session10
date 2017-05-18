@@ -6,7 +6,7 @@
 
 ```
 *:focus{
-  outline:none;
+  outline: none;
 }
 
 input:focus, 
@@ -17,12 +17,13 @@ textarea:focus {
 
 input:not(:focus), 
 textarea:not(:focus) {
-  opacity:0.5;
+  opacity: 0.5;
 }
 ```
 
 Native browser validation
 
+* novalidate
 * required, valid, invalid
 
 ```
@@ -49,16 +50,16 @@ Input types
 ```
 input[type=submit] {
   color: #fff;
-  padding:10px;
-  background:#007eb6;
-  opacity:1.0;
+  padding: 10px;
+  background: #007eb6;
+  opacity: 1.0;
 }
 
 input[type="number"], 
 input[type="number"]:required, 
 input[type="number"]:valid, 
 input[type="number"]:focus:invalid {
-  background-position:260px 7px; 
+  background-position: 260px 7px; 
 }
 ```
 
