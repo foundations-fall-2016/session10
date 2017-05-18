@@ -166,7 +166,7 @@ Add the suffix variable:
 document.querySelector('html').style.setProperty('--' + this.name, this.value + suffix);
 ```
 
-Refactor to easier to read ES6
+Refactor to ES6
 
 ```
 const inputs = document.querySelectorAll('.controls input');
