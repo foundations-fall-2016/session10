@@ -102,18 +102,18 @@ var inputs = document.querySelectorAll('.controls input');
 Note difference between node list and array. forEach method.
 
 ```js
-function handleUpdate(){
-  console.log(this.value);
-}
-
 inputs.forEach(function(input){
   input.addEventListener('change', handleUpdate)
 })
+
+function handleUpdate(){
+  console.log(this.value);
+}
 ```
 
 Note the update frequency.
 
-Add:
+*Add:*
 
 ```
 inputs.forEach(function(input){
@@ -166,6 +166,20 @@ Add the suffix variable:
 document.querySelector('html').style.setProperty('--' + this.name, this.value + suffix);
 ```
 
-Examine the FINISHED version to see es6 version of the code. Run it through http://babeljs.io/
+Refactor to easier to read ES6
+
+```
+const inputs = document.querySelectorAll('.controls input');
+
+function handleUpdate() {
+  const suffix = this.dataset.sizing || '';
+  document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+}
+
+inputs.forEach(input => input.addEventListener('change', handleUpdate));
+inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+```
+
+Run it through http://babeljs.io/
 
 
