@@ -1,5 +1,5 @@
 # Session 10
-
+ 
 ### Forms
 
 * focus
@@ -113,7 +113,7 @@ function handleUpdate(){
 
 Note the update frequency.
 
-*Add:*
+*Add*, do not replace existing listener:
 
 ```
 inputs.forEach(function(input){
@@ -121,7 +121,9 @@ inputs.forEach(function(input){
 })
 ```
 
-The suffix of the values we are working with - px. Note the data-sizing attribute in the html.
+Need to know the suffix of the values we are working with - px. 
+
+Note the data-sizing attribute in the html.
 
 Get the data set attribute values:
 
@@ -131,9 +133,15 @@ function handleUpdate(){
 }
 ```
 
-Add `data-daniel="me" data-munchies="snickers"`. 
+Data set is an object that contains all the data attributes on an html element.
 
-Try the below in the browser without the "or nothing".
+Temporarily add `data-daniel="me" data-munchies="snickers"`. 
+
+```
+<input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" data-daniel="me" data-munchies="snickers">
+```
+
+Try the below in the browser without the "or nothing". (Some of the data sets do not have sizing.)
 
 ```
 function handleUpdate(){
@@ -156,9 +164,10 @@ Tack the css on to the html element:
 function handleUpdate(){
   var suffix = this.dataset.sizing || '';
   document.querySelector('html').style.setProperty('--' + this.name, this.value);
-  console.log(this.name);
 }
 ```
+
+Examine the inspector. Note the lack of units.
 
 Add the suffix variable:
 
@@ -166,7 +175,13 @@ Add the suffix variable:
 document.querySelector('html').style.setProperty('--' + this.name, this.value + suffix);
 ```
 
-Refactor to ES6
+Note scope in CSS. Try:
+
+```
+<h2 style="--base: #bada55">
+```
+
+Refactor to easier to read ES6
 
 ```
 const inputs = document.querySelectorAll('.controls input');
