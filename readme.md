@@ -1,10 +1,8 @@
-# IX - DOM Scripting
-
-something
+# X - DOM Scripting Continued
 
 ## Homework
 
-Continue on your final projects.
+Final session - no homework.
 
 Top of the page
 
@@ -19,8 +17,6 @@ Full page
 ![image](/img/siteDesign.png)
 
 ## GIT and GITHUB
-
-change
 
 Git is a version control system originally invented for use developing Linux by Linus Torvalds. It is the standard version tool and integrates with Github to permit collaboration.
 
@@ -352,7 +348,7 @@ Design note: its common to include a box shadow on elements that float atop. -->
 
 Do a DOM review of this section of the page.
 
-In \_carousel.scss:
+In carousel.scss:
 
 ```css
 .secondary aside {
@@ -503,7 +499,7 @@ Correct wide screen view:
 
 Review the design. Let's try floats and absolute/relative positioning.
 
-In \_panels.scss:
+In panels.scss:
 
 ```css
 .hentry {
@@ -585,7 +581,7 @@ Redo the entire design - mobile first:
 }
 ```
 
-Final \_panels.scss:
+Final panels.scss:
 
 ```css
 .hentries {
